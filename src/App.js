@@ -1,14 +1,14 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './NavBar/navbar';
-import Container from './ItemListContainer/Container';
+import NavBar from './component/NavBar/NavBar';
+import Container from './component/ItemListContainer/Container';
 
 
 function App() {
 
   return (
     <>
-      <Navbar/>
+      <NavBar/>
       <Container saludo={'¡Bienvendios a Jothti!'} tamaño={'60px'}/>
     </>
   );

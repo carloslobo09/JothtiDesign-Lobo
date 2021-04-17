@@ -1,15 +1,13 @@
 import React from 'react';
 import Items from '../ItemListContainer/ItemsFc/itemsfc'
 
-export default class Container extends React.Component{
-    render(){
+const Container = ({tamaño,saludo}) =>{
         return(
             <div className='m-0 row justify-content-center'>
-                <Items saludo={this.props.saludo} tamaño={this.props.tamaño}/>
+                <Items saludo={saludo} tamaño={tamaño}/>
             </div>
         )
-    }
 }
-
+export default Container;
 
 
