@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './component/NavBar/NavBar';
-import Container from './component/ItemListContainer/Container';
+import ItemListContainer from './component/ItemListContainer/ItemListContainer';
 
 
 function App() {
@@ -9,7 +9,8 @@ function App() {
   return (
     <>
       <NavBar/>
-      <Container saludo={'¡Bienvendios a Jothti!'} tamaño={'60px'}/>
+      <ItemListContainer saludo={'¡Bienvendios a Jothti!'} tamaño={'60px'}>
+      </ItemListContainer>
     </>
   );
 }

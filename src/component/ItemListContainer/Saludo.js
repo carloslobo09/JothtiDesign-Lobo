@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Items = ({saludo, tamaño}) =>{
+const Saludo = ({saludo, tamaño}) =>{
     console.log(tamaño)
     return(
         
@@ -12,4 +12,4 @@ const Items = ({saludo, tamaño}) =>{
     )
 }
 
-export default Items;
+export default Saludo;
