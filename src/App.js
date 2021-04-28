@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <NavBar/>
-      <ItemListContainer saludo={'¡Bienvendios a Jothti!'} tamaño={'60px'}>
+      <ItemListContainer saludo={'¡Bienvendios a Jothti Diseños!'}>
       </ItemListContainer>
     </>
   );

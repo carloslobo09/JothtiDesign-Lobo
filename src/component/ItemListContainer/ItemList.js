@@ -1,76 +1,19 @@
+import { faDailymotion } from '@fortawesome/free-brands-svg-icons';
 import React from 'react';
 import Items from './Item'
 
 
 
-const ItemList = () =>{
+const ItemList = ({productos}) =>{
         return(
-                <div className="row">
-                    <Items
-                    id='asdasd'
-                    title='Remera'
-                    price='400'
-                    descripcion='Some quick example text to build on the card title and make up the bulk of the cards content.'
-                    img='../assets/remera.jpg'
-                    width='18rem'
-                    />    
-                    <Items
-                    id='asdasd'
-                    title='Remera'
-                    price='400'
-                    descripcion='Some quick example text to build on the card title and make up the bulk of the cards content.'
-                    img='../assets/remera.jpg'
-                    width='18rem'
-                    />  
-                    <Items
-                    id='asdasd'
-                    title='Remera'
-                    price='400'
-                    descripcion='Some quick example text to build on the card title and make up the bulk of the cards content.'
-                    img='../assets/remera.jpg'
-                    width='18rem'
-                    />  
-                    <Items
-                    id='asdasd'
-                    title='Remera'
-                    price='400'
-                    descripcion='Some quick example text to build on the card title and make up the bulk of the cards content.'
-                    img='../assets/remera.jpg'
-                    width='18rem'
-                    />  
-                    <Items
-                    id='asdasd'
-                    title='Remera'
-                    price='400'
-                    descripcion='Some quick example text to build on the card title and make up the bulk of the cards content.'
-                    img='../assets/remera.jpg'
-                    width='18rem'
-                    />  
-                    <Items
-                    id='asdasd'
-                    title='Remera'
-                    price='400'
-                    descripcion='Some quick example text to build on the card title and make up the bulk of the cards content.'
-                    img='../assets/remera.jpg'
-                    width='18rem'
-                    />  
-                    <Items
-                    id='asdasd'
-                    title='Remera'
-                    price='400'
-                    descripcion='Some quick example text to build on the card title and make up the bulk of the cards content.'
-                    img='../assets/remera.jpg'
-                    width='18rem'
-                    />  
-                    <Items
-                    id='asdasd'
-                    title='Remera'
-                    price='400'
-                    descripcion='Some quick example text to build on the card title and make up the bulk of the cards content.'
-                    img='../assets/remera.jpg'
-                    width='18rem'
-                    />  
-                </div>   
+                <>
+                {productos.map((dato)=>
+                        <div key={dato.id} className="col-sm-3">
+                                <Items producto={dato}  /> 
+                        </div>
+                )}         
+                
+                </>
         )
 }
 export default ItemList;
