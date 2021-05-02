@@ -12,8 +12,8 @@ const Saludo = ({saludo}) =>{
                 <div className="d-flex justify-content-center align-items-center h-100">
                     <div className="text-white">
                         <p className="mb-3" style={{fontSize:"80px"}}>{saludo}</p>
-                        <h4 className="mb-3">¿Necesitas un diseño personalizado? Contactanos!</h4>
-                        <a className="btn btn-outline-light btn-lg" href="#!" role="button">3878000111</a>
+                        <h4 className="mb-3">¿Necesitas un diseño personalizado?</h4>
+                        <a className="btn btn-outline-light btn-lg" href="#contactos" role="button">Contactanos</a>
                         <br/><br/><br/><br/><br/><br/><br/>
                     </div>
                 </div>
