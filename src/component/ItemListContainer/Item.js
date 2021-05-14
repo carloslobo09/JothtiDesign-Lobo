@@ -8,7 +8,7 @@ const Items = ({producto}) =>{
         <React.Fragment>
            
                     <div className="card" style={{width: "14rem" }}>
-                        <Link to={`/${producto.category}/${producto.id}`}>
+                        <Link to={`/item/${producto.id}`}>
                         <img src={producto.image} style={{width: "100%" , height:"200px"}} />
                         </Link>
                         <div className="card-body">

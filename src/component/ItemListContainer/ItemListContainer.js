@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import Saludo from './Saludo'
 import ItemList from './ItemList'
 import loader from '../Images/200.gif'
@@ -7,7 +8,8 @@ import loader from '../Images/200.gif'
 
 
 const ItemListContainer = ({tamaño,saludo}) =>{
-    const [arrayItems,setArrayItems]= useState({})
+    const [arrayItems,setArrayItems]= useState({});
+    const {id} = useParams();
 
     useEffect(()=>{
         const productos=[
@@ -127,7 +129,15 @@ const ItemListContainer = ({tamaño,saludo}) =>{
             },2000)    
             })
             listaProd.then((res)=>{
-                setArrayItems(res)
+                const catfilter = res.filter(x  => x.category === `${id}`) 
+
+                if(id === undefined){
+                    setArrayItems(res)
+                  }
+                  else{
+                   setArrayItems(catfilter)
+                 }
+
             })
             .catch(()=>{
                 console.log("Error al cargar")
@@ -135,7 +145,7 @@ const ItemListContainer = ({tamaño,saludo}) =>{
             .finally(()=>{
                 console.log("Se completo la carga")
             })
-    },[])
+    },[id])
 
     
 

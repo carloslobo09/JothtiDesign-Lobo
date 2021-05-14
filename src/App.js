@@ -14,10 +14,10 @@ function App() {
     <BrowserRouter>
       <NavBar/>
       <Switch>
-        <Route path='/:category/:id'>
+        <Route path='/item/:id'>
           <ItemDetailContainer />
         </Route>
-        <Route path='/:category'>
+        <Route path='/category/:id'>
           <ItemListContainer />
         </Route>
         <Route exact path='/'>
