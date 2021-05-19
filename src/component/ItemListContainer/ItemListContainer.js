@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Saludo from './Saludo'
 import ItemList from './ItemList'
+import PageError from '../PageError'
 import loader from '../Images/200.gif'
 
 
@@ -9,6 +10,7 @@ import loader from '../Images/200.gif'
 
 const ItemListContainer = ({tamaño,saludo}) =>{
     const [arrayItems,setArrayItems]= useState({});
+    const [notFound, setNotFound] = useState(false);
     const {id} = useParams();
 
     useEffect(()=>{
@@ -123,7 +125,7 @@ const ItemListContainer = ({tamaño,saludo}) =>{
             }
         ]
         
-        const listaProd = new Promise ((resolve, reject)=>{
+        const listaProd = new Promise ((resolve)=>{
             setTimeout (()=>{
                 resolve(productos)
             },2000)    
@@ -134,6 +136,9 @@ const ItemListContainer = ({tamaño,saludo}) =>{
                 if(id === undefined){
                     setArrayItems(res)
                   }
+                  else if(catfilter.length == 0){
+                    setNotFound(true)
+                    }
                   else{
                    setArrayItems(catfilter)
                  }
@@ -157,7 +162,7 @@ const ItemListContainer = ({tamaño,saludo}) =>{
             <div className='container-fluid'>
                 <Saludo saludo={saludo} tamaño={tamaño}/>
                 <div className="row">
-                    {arrayItems.length > 0 ? <ItemList productos={arrayItems} /> : <img src={loader} style={{width:'30%', position:'absolute', top:'50%', left:'35%' }} />}
+                    {notFound === true ? <PageError/> : arrayItems.length > 0 ? <ItemList productos={arrayItems} /> : <img src={loader} style={{width:'30%', position:'absolute', top:'50%', left:'35%' }} />}
                 </div>
             </div>
             </React.Fragment>
