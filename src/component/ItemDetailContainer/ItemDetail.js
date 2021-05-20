@@ -4,8 +4,6 @@ import React from 'react';
 
 const ItemDetail = ({producto}) =>{
         return(
-                <>
-                {producto.map((producto)=>
                         <div key={producto.id}>
                                 <br/><br/>
                                 <div className="container">
@@ -25,10 +23,8 @@ const ItemDetail = ({producto}) =>{
                                         </div>   
                                 </div>
                                 <br />
-                        </div>
-                )}         
+                        </div>        
                 
-                </>
         )
 }
 export default ItemDetail;
