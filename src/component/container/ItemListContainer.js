@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import ItemDetail from './ItemDetail'
+import { useParams } from 'react-router-dom';
+import Saludo from '../saludo/Saludo'
+import ItemList from '../itemlist/ItemList'
+import PageError from '../error/PageError'
 import loader from '../Images/200.gif'
-import {useParams} from 'react-router-dom';
 
 
 
 
-const ItemDetailContainer = ({}) =>{
-    const [Item,setItem]= useState({})
-    const {id} = useParams()
+const ItemListContainer = ({tamaño,saludo}) =>{
+    const [arrayItems,setArrayItems]= useState({});
+    const [notFound, setNotFound] = useState(false);
+    const {id} = useParams();
 
     useEffect(()=>{
-    const getItem = ()=>{
-        return new Promise((resolve,reject)=>{
-        const producto=[
+        const productos=[
             {
                 id:1,
                 title:'Remera Gris Lisa',
@@ -122,19 +123,34 @@ const ItemDetailContainer = ({}) =>{
                 stock: 5,
                 category: 'bolso'
             }
-            ];
-            setTimeout(() => {
-                resolve(producto);
+        ]
+        
+        const listaProd = new Promise ((resolve)=>{
+            setTimeout (()=>{
+                resolve(productos)
+            },2000)    
+            })
+            listaProd.then((res)=>{
+                const catfilter = res.filter(x  => x.category === `${id}`) 
 
-            }, 2000);
-        })
-    }
-    
-    getItem().then(Item =>{
-        const itemFilter =  Item.filter(producto =>producto.id ==`${id}`)
-          
-       setItem(itemFilter)})
-      },[])
+                if(id === undefined){
+                    setArrayItems(res)
+                  }
+                  else if(catfilter.length == 0){
+                    setNotFound(true)
+                    }
+                  else{
+                   setArrayItems(catfilter)
+                 }
+
+            })
+            .catch(()=>{
+                console.log("Error al cargar")
+            })
+            .finally(()=>{
+                console.log("Se completo la carga")
+            })
+    },[id])
 
     
 
@@ -144,12 +160,13 @@ const ItemDetailContainer = ({}) =>{
             <React.Fragment>
             <br/><br/><br/><br/>
             <div className='container-fluid'>
+                <Saludo saludo={saludo} tamaño={tamaño}/>
                 <div className="row">
-                    {Item.length > 0 ? <ItemDetail producto={Item[0]} /> : <center><img src={loader}/></center> }
+                    {notFound === true ? <PageError/> : arrayItems.length > 0 ? <ItemList productos={arrayItems} /> : <img src={loader} style={{width:'30%', position:'absolute', top:'50%', left:'35%' }} />}
                 </div>
             </div>
             </React.Fragment>
         )
 }
-export default ItemDetailContainer;
+export default ItemListContainer;
 

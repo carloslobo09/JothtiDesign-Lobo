@@ -1,9 +1,11 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './component/NavBar/NavBar';
-import ItemListContainer from './component/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './component/ItemDetailContainer/ItemDetailContainer'
-import Footer from './component/Footer'
+import ItemListContainer from './component/container/ItemListContainer';
+import ItemDetailContainer from './component/container/ItemDetailContainer'
+import {CartProvider} from './context/cartContext'
+import Cart from './component/cart/Cart'
+import Footer from './component/footer/Footer'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 
@@ -11,14 +13,18 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 function App() {
 
   return (
+    <CartProvider value={[]}>
     <BrowserRouter>
-      <NavBar/>
+        <NavBar/>
       <Switch>
+      <Route path='/category/:id'>
+          <ItemListContainer />
+        </Route>
         <Route path='/item/:id'>
           <ItemDetailContainer />
         </Route>
-        <Route path='/category/:id'>
-          <ItemListContainer />
+        <Route exact path='/cart'>
+            <Cart/>
         </Route>
         <Route exact path='/'>
           <ItemListContainer saludo={'¡Bienvendios a Jothti Diseños!'}>
@@ -27,6 +33,7 @@ function App() {
       </Switch>
       <Footer/>
     </BrowserRouter>
+    </CartProvider>
   );
 }
 

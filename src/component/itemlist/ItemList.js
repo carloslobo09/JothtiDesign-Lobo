@@ -1,6 +1,5 @@
-import { faDailymotion } from '@fortawesome/free-brands-svg-icons';
 import React from 'react';
-import Items from './Item'
+import Items from '../item/Item'
 
 
 

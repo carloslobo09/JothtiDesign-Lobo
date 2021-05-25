@@ -1,6 +1,6 @@
 import React from 'react';
-import Imagen from './NavBarFc/Imagen'
-import CartWidget from './NavBarFc/CartWidget'
+import Imagen from '../logo/Logo'
+import CartWidget from '../cart/CartWidget'
 import { Link } from 'react-router-dom'
 
 const NavBar= () =>{
@@ -28,8 +28,9 @@ const NavBar= () =>{
                             </li>
                         </ul>
                     </div>
-                    <CartWidget />
+                    <Link to={'/cart'}><CartWidget /></Link>
                 </div>
+                
             </nav>
         )
 }

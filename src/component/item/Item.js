@@ -1,5 +1,4 @@
 import React from 'react';
-import ItemCount from './ItemCount'
 import {Link} from 'react-router-dom'
 
 const Items = ({producto}) =>{
@@ -18,7 +17,6 @@ const Items = ({producto}) =>{
                                 <li className="list-group-item"></li>
                                 <li className="list-group-item"></li>
                             </ul>
-                            <ItemCount stock={producto.stock} />
                         </div>
                     </div>
                     <br/>
