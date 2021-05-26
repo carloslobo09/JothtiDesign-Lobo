@@ -2,6 +2,7 @@ import React from 'react';
 import Imagen from '../logo/Logo'
 import CartWidget from '../cart/CartWidget'
 import { Link } from 'react-router-dom'
+import './navbar.css';
 
 const NavBar= () =>{
         return(
@@ -15,16 +16,16 @@ const NavBar= () =>{
                     <div className="collapse navbar-collapse " id="navbarNav">
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item">
-                                <Link to={`/category/remera`}><a className="nav-link active" href='#'>Remeras</a></Link>
+                                <Link to={`/category/remera`}><a style={{marginLeft:"30px"}} className="btn btn-secondary " href='#'>Remeras</a></Link>
                             </li>
                             <li className="nav-item">
-                                <Link to={`/category/short`}><a className="nav-link active" href='#'>Shorts</a></Link>
+                                <Link to={`/category/short`}><a style={{marginLeft:"30px"}} className="btn btn-secondary" href='#'>Shorts</a></Link>
                             </li>
                             <li className="nav-item">
-                                <Link to={`/category/bolso`}><a className="nav-link active" href='#'>Bolsos</a></Link>
+                                <Link to={`/category/bolso`}><a style={{marginLeft:"30px"}} className="btn btn-secondary" href='#'>Bolsos</a></Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" href='#'>¿Quienes Somos?</a>
+                                <a style={{marginLeft:"220px"}} className="btn btn-secondary" href='#'>¿Quienes Somos?</a>
                             </li>
                         </ul>
                     </div>
