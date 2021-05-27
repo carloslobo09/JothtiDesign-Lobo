@@ -27,7 +27,7 @@ const Footer = () =>{
             </div>
             </div>
                 <div className="footer-copyright text-center py-3">© 2021 Copyright:
-                    <a style={{color:'white' ,textDecoration:'none'}} href="https://www.facebook.com/CIL1997"> carloslobo.com.ar</a>
+                    <a style={{color:'white' ,textDecoration:'none'}} href="https://www.facebook.com/CIL1997"> Carlos Lobo </a>
                 </div>
         </footer>
     )

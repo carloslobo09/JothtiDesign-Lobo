@@ -25,7 +25,7 @@ const NavBar= () =>{
                                 <Link to={`/category/bolso`}><a style={{marginLeft:"30px"}} className="btn btn-secondary" href='#'>Bolsos</a></Link>
                             </li>
                             <li className="nav-item">
-                                <a style={{marginLeft:"220px"}} className="btn btn-secondary" href='#'>¿Quienes Somos?</a>
+                                <Link to={`/quienessomos`} style={{textDecoration:"none"}}> <a style={{marginLeft:"220px", textDecoration:"none", color:"black", fontSize:"20px"}}  href='#'>¿Quienes Somos?</a></Link> 
                             </li>
                         </ul>
                     </div>
