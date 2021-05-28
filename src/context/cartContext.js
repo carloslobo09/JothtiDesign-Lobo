@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const cartContext = React.createContext([]);
@@ -9,11 +8,14 @@ export const useCartContext = () => useContext(cartContext);
 
 export function CartProvider({ children }) {
 
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(localStorage.getItem('Items')
+  ? JSON.parse(localStorage.getItem('Items'))
+  : []);
   const[tost, setTost] = useState(false)
+  const [vacio, setVacio]= useState(false)
 
   useEffect(() => {
-    
+    localStorage.setItem('Items', JSON.stringify(items));
   }, [items]);
 
 
@@ -54,6 +56,9 @@ export function CartProvider({ children }) {
 
   function getUnits(){
     const uni = items.reduce((a,b)=>(a + b.qty),0)
+    if(uni === 0){
+      setVacio(false)
+    }
     return uni;
   }
 
@@ -64,17 +69,16 @@ export function CartProvider({ children }) {
   }
  
   const removeItems = (item) => {
-    console.log(item)
     const newItems = items.filter(x=> x.id !== item);
     setItems(newItems);
-    console.log('Dato eliminado');
   };
 
-
-  const clearItems = () => setItems([]);
-
+  const clearItems = () =>{
+  setItems([])
+  setVacio(false);
+  } 
   return (
-    <cartContext.Provider value={{ items, addItems, removeItems, clearItems, total, getUnits, tost }}>
+    <cartContext.Provider value={{ items, addItems, removeItems, clearItems, total, getUnits, tost, vacio }}>
       {children}
     </cartContext.Provider>
   );

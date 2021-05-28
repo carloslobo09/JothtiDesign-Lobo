@@ -3,13 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
 
 
-const ItemCount = ({id, stockV, stockTotal, sumar, restar, botonActivo, activo, onAdd, count}) =>{
+const ItemCount = ({ stockV, stockTotal, sumar, restar, botonActivo, activo, onAdd, count}) =>{
         return(
                 <React.Fragment>
                         <div className="col-md-4">
                         </div>
                         <div className="col-md-8">
-                            <h2 id={id}>Cantidad en stock: {stockTotal}</h2>
+                            <h2 >Cantidad en stock: {stockTotal}</h2>
                             <ul className="list-group list-group-flush">
                                 <li className="list-group-item"></li>
                                 <li className="list-group-item"></li>

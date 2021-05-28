@@ -2,9 +2,8 @@ import React, {useState, useEffect} from 'react';
 import ItemCount from '../itemCount/ItemCount'
 
 
-const ItemCountContainer = ({datos, onAdd}) => {
-  
-    const [stockTotal, setStockTotal] = useState(datos.stock);
+const ItemCountContainer = ({ stock, onAdd}) => {
+    const [stockTotal, setStockTotal] = useState(stock);
     const [stockV, setStockV] = useState(0);
     const [botonActivo, setBotonActivo] = useState(true);
     const [activo,setActivo]=useState(false)
@@ -12,20 +11,21 @@ const ItemCountContainer = ({datos, onAdd}) => {
 
 
     useEffect(() => {
-      if(stockTotal == 0){
+      setStockTotal(stock);
+
+      if(stockTotal === 0){
         setBotonActivo(false);
         if(stockV > 0){
           setBotonActivo(true);
         }
       }
-    }, [stockTotal,stockV])
+    }, [stockTotal,stockV,stock])
     
     
     const sumar = () => {
       
-       if(stockTotal > 0){
+       if(stockTotal > 0 && (stockV < 5)){
       setStockV( stockV + 1 );
-      setStockTotal (stockTotal - 1);
       setActivo(true)
       }
     }
@@ -37,13 +37,12 @@ const ItemCountContainer = ({datos, onAdd}) => {
         setStockV(0);
       }
       else if(stockTotal >= 0 ){
-      setStockV ( stockV - 1);
-      setStockTotal (stockTotal + 1)
-
+      setStockV (stockTotal+1)
+        
       }
     }
     return (
-        <ItemCount id={datos.id} stockV={stockV} stockTotal={stockTotal} sumar={sumar} restar={restar} botonActivo={botonActivo} activo={activo} onAdd={onAdd} count={count}/>
+        <ItemCount  stockV={stockV} stockTotal={stockTotal} sumar={sumar} restar={restar} botonActivo={botonActivo} activo={activo} onAdd={onAdd} count={count}/>
     )
 }
 export default ItemCountContainer;

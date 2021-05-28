@@ -14,7 +14,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 function App() {
 
   return (
-    <CartProvider value={[]}>
+    <CartProvider>
     <BrowserRouter>
         <NavBar/>
       <Switch>
@@ -31,8 +31,7 @@ function App() {
             <Cart/>
         </Route>
         <Route exact path='/'>
-          <ItemListContainer saludo={'¡Bienvendios a Jothti Diseños!'}>
-          </ItemListContainer>
+          <ItemListContainer />
         </Route>
       </Switch>
       <Footer/>

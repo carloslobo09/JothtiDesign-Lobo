@@ -3,8 +3,9 @@ import {Link} from 'react-router-dom'
 import {useCartContext} from '../../context/cartContext'
 import './cart.css'
 const Cart = () => {
-    const {items, removeItems, clearItems, total} = useCartContext();
+    const {items, removeItems, clearItems, total, getUnits} = useCartContext();
     return (
+        <>
         <section className="section section-xl bg-default">
             
             <div className="container">
@@ -48,6 +49,8 @@ const Cart = () => {
                 </center>
             </div>
       </section>
+      {/* <CheckOutContainer items={items} total={total} getUnits={getUnits} clearItems={clearItems}/> */}
+      </>
     )
 }
 export default Cart;

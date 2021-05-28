@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Saludo = ({saludo}) =>{
+const Saludo = ({}) =>{
     return(
         <>
         <div
@@ -11,7 +11,7 @@ const Saludo = ({saludo}) =>{
             <div className="mask" style={{backgroundColor:"rgba(0, 0, 0, 0.5)"}}>
                 <div className="d-flex justify-content-center align-items-center h-100">
                     <div className="text-white">
-                        <p className="mb-3" style={{fontSize:"80px"}}>{saludo}</p>
+                        <p className="mb-3" style={{fontSize:"80px"}}>¡Bienvendios a Jothti Diseños!</p>
                         <h4 className="mb-3">¿Necesitas un diseño personalizado?</h4>
                         <a className="btn btn-outline-light btn-lg" href="#contactos" role="button">Contactanos</a>
                         <br/><br/><br/><br/><br/><br/><br/>
