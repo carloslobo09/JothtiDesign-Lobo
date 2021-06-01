@@ -1,0 +1,17 @@
+
+.modal-title{
+    font-family: 'AustieBostKittenKlub';
+}
+.email-error{
+    color: red;
+}
+.img-order{
+    width: 60%;
+    margin: auto;
+}
+.form{
+    justify-items: center;
+    display: inline-grid;
+    text-align: center;
+    padding: 35px;
+}

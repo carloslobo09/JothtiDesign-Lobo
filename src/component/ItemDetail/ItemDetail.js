@@ -1,8 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-
-
 const ItemDetail = ({datos}) =>{
         return(
                         <div key={datos.id}>
@@ -26,7 +24,6 @@ const ItemDetail = ({datos}) =>{
                                 </div>
                                 <br />
                         </div>        
-                
         )
 }
 export default ItemDetail;
