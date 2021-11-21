@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'
 import firebase from 'firebase/app'
-import '../../Firebase'
-import { getFirestore } from '../../Firebase'
+import '../../firebase'
+import { getFirestore } from '../../firebase'
 import CheckOut from '../checkout/CheckOut'
 import { UserContext } from '../../context/userContext';
 import { useCartContext } from '../../context/cartContext'

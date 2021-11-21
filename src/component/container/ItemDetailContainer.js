@@ -7,7 +7,7 @@ import PageError from '../error/PageError'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useCartContext } from '../../context/cartContext'
-import { getFirestore } from '../../Firebase'
+import { getFirestore } from '../../firebase'
 
 const ItemDetailContainer = ({ }) => {
     const [datos, setDatos] = useState({})

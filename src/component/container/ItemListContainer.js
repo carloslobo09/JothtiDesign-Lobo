@@ -4,7 +4,7 @@ import Saludo from '../saludo/Saludo'
 import ItemList from '../itemlist/ItemList'
 import PageError from '../error/PageError'
 import loader from '../Images/200.gif'
-import { getFirestore } from '../../Firebase'
+import { getFirestore } from '../../firebase'
 
 const ItemListContainer = ({ tamaño, saludo }) => {
     const [arrayItems, setArrayItems] = useState({});
