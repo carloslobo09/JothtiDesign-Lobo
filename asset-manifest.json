@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/JothtiDesign-Lobo/static/css/main.54f10439.chunk.css",
+    "main.js": "/JothtiDesign-Lobo/static/js/main.9dabe624.chunk.js",
+    "main.js.map": "/JothtiDesign-Lobo/static/js/main.9dabe624.chunk.js.map",
+    "runtime-main.js": "/JothtiDesign-Lobo/static/js/runtime-main.94dee6f3.js",
+    "runtime-main.js.map": "/JothtiDesign-Lobo/static/js/runtime-main.94dee6f3.js.map",
+    "static/css/2.56001c6a.chunk.css": "/JothtiDesign-Lobo/static/css/2.56001c6a.chunk.css",
+    "static/js/2.dae55fc6.chunk.js": "/JothtiDesign-Lobo/static/js/2.dae55fc6.chunk.js",
+    "static/js/2.dae55fc6.chunk.js.map": "/JothtiDesign-Lobo/static/js/2.dae55fc6.chunk.js.map",
+    "static/js/3.a36af989.chunk.js": "/JothtiDesign-Lobo/static/js/3.a36af989.chunk.js",
+    "static/js/3.a36af989.chunk.js.map": "/JothtiDesign-Lobo/static/js/3.a36af989.chunk.js.map",
+    "index.html": "/JothtiDesign-Lobo/index.html",
+    "static/css/2.56001c6a.chunk.css.map": "/JothtiDesign-Lobo/static/css/2.56001c6a.chunk.css.map",
+    "static/css/main.54f10439.chunk.css.map": "/JothtiDesign-Lobo/static/css/main.54f10439.chunk.css.map",
+    "static/js/2.dae55fc6.chunk.js.LICENSE.txt": "/JothtiDesign-Lobo/static/js/2.dae55fc6.chunk.js.LICENSE.txt",
+    "static/media/200.ccca0bfb.gif": "/JothtiDesign-Lobo/static/media/200.ccca0bfb.gif",
+    "static/media/jothti.36e72d8f.png": "/JothtiDesign-Lobo/static/media/jothti.36e72d8f.png",
+    "static/media/logincheck.22ed0fe9.gif": "/JothtiDesign-Lobo/static/media/logincheck.22ed0fe9.gif",
+    "static/media/quienes.507b92f7.png": "/JothtiDesign-Lobo/static/media/quienes.507b92f7.png",
+    "static/media/vacio.7dc4cb31.svg": "/JothtiDesign-Lobo/static/media/vacio.7dc4cb31.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.94dee6f3.js",
+    "static/css/2.56001c6a.chunk.css",
+    "static/js/2.dae55fc6.chunk.js",
+    "static/css/main.54f10439.chunk.css",
+    "static/js/main.9dabe624.chunk.js"
+  ]
+}
