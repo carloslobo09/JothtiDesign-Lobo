@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/JothtiDesign-Lobo/static/css/main.54f10439.chunk.css",
-    "main.js": "/JothtiDesign-Lobo/static/js/main.6b3ddbed.chunk.js",
-    "main.js.map": "/JothtiDesign-Lobo/static/js/main.6b3ddbed.chunk.js.map",
+    "main.js": "/JothtiDesign-Lobo/static/js/main.f8e82d25.chunk.js",
+    "main.js.map": "/JothtiDesign-Lobo/static/js/main.f8e82d25.chunk.js.map",
     "runtime-main.js": "/JothtiDesign-Lobo/static/js/runtime-main.94dee6f3.js",
     "runtime-main.js.map": "/JothtiDesign-Lobo/static/js/runtime-main.94dee6f3.js.map",
     "static/css/2.56001c6a.chunk.css": "/JothtiDesign-Lobo/static/css/2.56001c6a.chunk.css",
@@ -25,6 +25,6 @@
     "static/css/2.56001c6a.chunk.css",
     "static/js/2.3672a2c0.chunk.js",
     "static/css/main.54f10439.chunk.css",
-    "static/js/main.6b3ddbed.chunk.js"
+    "static/js/main.f8e82d25.chunk.js"
   ]
 }
